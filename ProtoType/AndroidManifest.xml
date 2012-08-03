@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.BlockIt"
+    android:installLocation="auto"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk
+        android:minSdkVersion="8"
+        android:targetSdkVersion="15" />
+
+    <uses-permission android:name="android.permission.READ_CONTACTS" >
+    </uses-permission>
+    <uses-permission android:name="android.permission.WRITE_CONTACTS" >
+    </uses-permission>
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" >
+    </uses-permission>
+    <uses-permission android:name="android.permission.RECEIVE_SMS" >
+    </uses-permission>
+    <uses-permission android:name="android.permission.READ_SMS" >
+    </uses-permission>
+    <uses-permission android:name="android.permission.WRITE_SMS" >
+    </uses-permission>
+    <uses-permission android:name="android.permission.VIBRATE" >
+    </uses-permission>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" >
+    </uses-permission>
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+
+    <application
+        android:debuggable="true"
+        android:icon="@drawable/call3"
+        android:label="Block It" >
+        <activity
+            android:name=".ProtoTypeMain"
+            android:label="Block It" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.google.ads.AdActivity"
+            android:configChanges="keyboard|keyboardHidden|orientation" />
+        <activity
+            android:name=".Register"
+            android:label="Register" >
+        </activity>
+        <activity
+            android:name="com.BlockIt.calls.BlockCallsPressed"
+            android:label="Block Calls" >
+        </activity>
+        <activity
+            android:name=".calls.AddContactToBlock"
+            android:label="Add Contact to BlackList" >
+        </activity>
+        <activity
+            android:name=".calls.ViewBlackList"
+            android:label="Black List" >
+        </activity>
+        <activity
+            android:name=".sms.BlockSMSPressed"
+            android:label="Block SMS" >
+        </activity>
+
+        <receiver android:name=".sms.SMSBlockingProcess" >
+            <intent-filter android:priority="100" >
+                <action android:name="android.provider.Telephony.SMS_RECEIVED" >
+                </action>
+            </intent-filter>
+        </receiver>
+
+        <activity
+            android:name=".sms.AddContactToBlockSMS"
+            android:label="Add Contact" >
+        </activity>
+        <activity
+            android:name=".sms.ViewBlackListSMS"
+            android:label="SMS BlackList" >
+        </activity>
+        <activity
+            android:name=".Help_html"
+            android:label="Help" >
+        </activity>
+
+        <!-- Airpush Code Start -->
+        <activity
+            android:name="com.airpush.android.PushAds"
+            android:configChanges="orientation|keyboardHidden" />
+
+        <receiver android:name="com.airpush.android.UserDetailsReceiver" />
+        <receiver android:name="com.airpush.android.MessageReceiver" />
+        <receiver android:name="com.airpush.android.DeliveryReceiver" />
+        <receiver android:name="com.BlockIt.BootReceiver" >
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+
+                <category android:name="android.intent.category.HOME" />
+            </intent-filter>
+        </receiver>
+
+        <service android:name="com.airpush.android.PushService" >
+            <intent-filter>
+                <action android:name="com.airpush.android.PushServiceStart13075" />
+            </intent-filter>
+        </service>
+        <!-- Airpush Code End -->
+
+    </application>
+
+</manifest>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent" android:gravity="center_horizontal" android:orientation="vertical" android:paddingBottom="5dip" android:paddingTop="30dip">
+    <LinearLayout android:layout_height="wrap_content" android:layout_width="match_parent" android:paddingLeft="15dip" android:id="@+id/linearLayout1" android:paddingRight="15dip" android:gravity="center_horizontal">
+        <ImageView android:layout_height="wrap_content" android:id="@+id/imageView1" android:layout_width="wrap_content" android:src="@drawable/call3" android:paddingTop="5dip"></ImageView>
+        <TextView android:paddingLeft="20dip" android:textSize="38dip" android:id="@+id/textView1" android:textColor="@color/Red" android:layout_height="wrap_content" android:text="@string/Head" android:layout_width="wrap_content" android:paddingTop="15dip"></TextView>
+    </LinearLayout>
+    <LinearLayout android:layout_height="wrap_content" android:orientation="vertical" android:layout_width="match_parent" android:id="@+id/linearLayout2" android:paddingLeft="25dip" android:paddingRight="25dip" android:paddingTop="15dip" android:paddingBottom="5dip">
+        <Button android:text="Block Calls" android:layout_height="wrap_content" android:id="@+id/bcalls" android:layout_width="match_parent"></Button>
+        <Button android:text="Block SMS" android:layout_height="wrap_content" android:id="@+id/bsms" android:layout_width="fill_parent"></Button>
+        <Button android:text="Help" android:layout_height="wrap_content" android:layout_width="match_parent" android:id="@+id/help"></Button>
+        <Button android:layout_height="wrap_content" android:layout_width="match_parent" android:id="@+id/Exit" android:text="Exit"></Button>
+    </LinearLayout>
+    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:id="@+id/Adds"></LinearLayout>
+</LinearLayout>

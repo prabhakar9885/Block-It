@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_height="wrap_content" android:padding="10dip" android:orientation="vertical" android:layout_width="fill_parent">
+	<LinearLayout android:id="@+id/linearLayout1"
+		android:layout_height="wrap_content" android:layout_width="match_parent">
+		<TextView android:id="@+id/textView1" android:layout_height="wrap_content"
+			android:text="Name" android:layout_width="match_parent"
+			android:layout_weight="1" android:gravity="center_horizontal"></TextView>
+		<EditText android:singleLine="true" android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:layout_weight="0.6" android:id="@+id/SMS_name"></EditText>
+	</LinearLayout>
+	<LinearLayout android:id="@+id/linearLayout2"
+		android:layout_height="wrap_content" android:layout_width="match_parent"
+		android:layout_weight="1">
+		<TextView android:id="@+id/textView2" android:layout_height="wrap_content"
+			android:text="Number" android:layout_width="match_parent"
+			android:layout_weight="1" android:gravity="center_horizontal"></TextView>
+		<EditText android:layout_height="wrap_content"
+			android:layout_width="match_parent" android:layout_weight="0.6" android:singleLine="true" android:phoneNumber="true" android:id="@+id/SMS_number"></EditText>
+	</LinearLayout>
+
+</LinearLayout>

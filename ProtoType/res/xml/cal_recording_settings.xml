@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+	<PreferenceCategory android:title="Options"><CheckBoxPreference android:defaultValue="false"
+		android:title="Enable" android:summary="Enables the application to record your calls."
+		android:key="Enable"></CheckBoxPreference></PreferenceCategory>
+</PreferenceScreen>
